@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(229, 206, 175);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+  margin: 10px;
+  overflow: auto;
+}
+header h1 {
+  font-size: 40px;
+  margin-left: 20px;
+}
+header ul {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 5px;
+}
+header li {
+  list-style: none;
+  font-size: 30px;
+  padding: 10px;
+}
+header a {
+  text-decoration: none;
+  display: inline-block;
+  color: black;
+  margin-right: 25px;
+}
+header a :hover {
+  color: rgb(196, 8, 64);
+}
+
+/*Main Section styling goes here!!**/
+
+.main-flex-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.listing,
+.imagesChanging {
+  border: 2px solid green;
+  flex: 1;
+  margin: 10px;
+}
+.listing {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.listing > * {
+  border: 2px solid red;
+  margin: 20px;
+  font-size: 25px;
+}
+.imagesChanging img {
+  width: 90%;
+  height: 600px;
+}
+
+/**MEDIA QUERIES GO HERE**/
+@media (max-width: 1180px) {
+  .main-flex-container > * {
+    flex-basis: 100%;
+    color: red;
+  }
+  .imagesChanging img {
+    width: 500px;
+    height: 600px;
+  }
+  .imagesChanging {
+    text-align: center;
+  }
+}
+@media (max-width: 1090px) {
+  header li {
+    font-size: 22px;
+  }
+}
+@media (max-width: 960px) {
+  header {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  header ul {
+    flex-basis: 100%;
+    margin-top: -20px;
+  }
+}
+@media (max-width: 700px) {
+  .imagesChanging img {
+    width: 500px;
+    height: 600px;
+  }
+}
